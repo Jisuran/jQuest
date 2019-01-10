@@ -7,14 +7,28 @@ class Personnage{
   protected $nom;
 	
 	public function setVie($vie){
-		
 		$this->vie=$vie;
-		
 	}
 
 	public function getVie(){
 		return $this->vie;
 	}
+
+	public function setAtk($atk){
+		$this->atk = $atk;
+	}
+
+	public function getAtk(){
+		return $this->atk;
+	}
+
+	public function setNom($nom){
+		$this->nom = $nom;
+	}
+
+public function getNom(){
+	return $this->nom;
+}
 
 	public function __construct($nom){
 		
