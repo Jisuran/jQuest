@@ -9,6 +9,11 @@
   <script src="main.js"></script>
 </head>
 <body>
-  
+  <?php
+    require 'Autoloader.php';
+    Autoloader::register();
+    $perso = new Personnage('fesse');
+    var_dump($perso);
+  ?>
 </body>
 </html>
