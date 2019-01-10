@@ -14,7 +14,15 @@
     Autoloader::register();
     $fesse = new Arcaniste('Fesse');
     $cravache = new Arcaniste('Cravache');
+    $fesse->attaque($cravache);
     $cravache->attaque($fesse);
+    $fesse->attaque($cravache);
+    $cravache->attaque($fesse);
+    $fesse->attaque($cravache);
+    $cravache->attaque($fesse);
+    $fesse->attaque($cravache);
+    $cravache->attaque($fesse);
+    $fesse->attaque($cravache);
     echo $fesse->mort();
     var_dump($fesse,$cravache);
 	

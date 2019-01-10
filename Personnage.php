@@ -11,6 +11,11 @@ class Personnage{
 		$this->vie=$vie;
 		
 	}
+
+	public function getVie(){
+		return $this->vie;
+	}
+
 	public function __construct($nom){
 		
 		$this->nom = $nom ;
