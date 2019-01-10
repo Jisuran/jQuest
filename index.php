@@ -12,11 +12,11 @@
   <?php
     require 'Autoloader.php';
     Autoloader::register();
-    $fesse = new Personnage('Fesse');
+    $fesse = new Arcaniste('Fesse');
     $cravache = new Arcaniste('Cravache');
-	$cravache->attaque($fesse);
-	$fesse->mort();
-	var_dump($fesse,$cravache);
+    $cravache->attaque($fesse);
+    echo $fesse->mort();
+    var_dump($fesse,$cravache);
 	
 	
   ?>

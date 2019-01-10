@@ -6,7 +6,7 @@ class Personnage{
   protected $atk = 20;
   protected $nom;
 	
-	public setVie($vie){
+	public function setVie($vie){
 		
 		$this->vie=$vie;
 		
