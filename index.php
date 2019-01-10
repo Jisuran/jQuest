@@ -12,8 +12,13 @@
   <?php
     require 'Autoloader.php';
     Autoloader::register();
-    $perso = new Personnage('fesse');
-    var_dump($perso);
+    $fesse = new Personnage('Fesse');
+    $cravache = new Arcaniste('Cravache');
+	$cravache->attaque($fesse);
+	$fesse->mort();
+	var_dump($fesse,$cravache);
+	
+	
   ?>
 </body>
 </html>
