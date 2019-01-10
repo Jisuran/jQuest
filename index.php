@@ -6,6 +6,7 @@
   <title>demoPHP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
   <script src="main.js"></script>
 </head>
 <body>
@@ -15,11 +16,15 @@
     $fesse = new Arcaniste('Fesse');
     $cravache = new Arcaniste('Cravache');
     $fesse->attaque($cravache);
-    $cravache->attaque($fesse);
     $fesse->attaque($cravache);
     $cravache->attaque($fesse);
     $fesse->attaque($cravache);
+    $fesse->attaque($cravache);
     $cravache->attaque($fesse);
+    $fesse->attaque($cravache);
+    $fesse->attaque($cravache);
+    $cravache->attaque($fesse);
+    $fesse->attaque($cravache);
     $fesse->attaque($cravache);
     $cravache->attaque($fesse);
     $fesse->attaque($cravache);

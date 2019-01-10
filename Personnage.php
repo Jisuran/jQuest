@@ -26,30 +26,25 @@ class Personnage{
 		$this->nom = $nom;
 	}
 
-public function getNom(){
-	return $this->nom;
-}
+	public function getNom(){
+		return $this->nom;
+	}
 
 	public function __construct($nom){
-		
 		$this->nom = $nom ;
 	}
+
 	public function attaque($cible){
-		
 		$cible->vie -= $this->atk ;
-	
 	}
 	public function mort(){
 		
 		if ($this->vie<=0){
-			
 			return $this->nom.' est mort. RIP' ;
 		}
-		else {
-			
-			return $this->nom. "n'est pas mort , il lui reste ".$this->vie." point de vie";
-			
-		}
+		// else {
+		// 	return $this->nom." n'est pas mort , il lui reste ".$this->vie." point de vie";
+		// }
 	}
 	
 }
