@@ -10,9 +10,9 @@
 		}
 		public static function personnageForm($personnage){
 
-			<div class="personnage" >
-			 <label> Vie de $personnage->getNom() : $personnage->getVie </label>
-			</div>
+			echo 	'<div class="personnage" >'.
+			 				'<label> Vie de '.$personnage->getNom().' : '.$personnage->getVie().' </label>'.
+						'</div>';
 		}
 		
 	}

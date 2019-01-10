@@ -25,7 +25,8 @@
     $fesse->attaque($cravache);
     echo $fesse->mort();
     var_dump($fesse,$cravache);
-	
+    FichePersonnage::personnageForm($fesse);
+    FichePersonnage::personnageForm($cravache);
 	
   ?>
 </body>
