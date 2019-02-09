@@ -7,12 +7,20 @@ class Personnage{
   protected $armure				= 10;
   protected $attaque			= 0;
 	protected $resistance		= 0;
-	protected $defense  		= false;
 	
+	/**
+	 * @param string $nom
+	 * crée un objet personnage avec un nom
+	 */
 	public function __construct($nom){
-		$this->nom = $nom ;
+		$this->setNom($nom); ;
 	}
 
+	/**
+	 * @param Personnage $cible
+	 * calcule les points d'armure ou de vie perdu(s)
+	 * 		en cas de mort, la partie prend fin.
+	 */
 	public function attaque($cible){
 
 		if($cible->getResistance() < $this->attaque){
@@ -32,6 +40,10 @@ class Personnage{
 		}
   }
 
+	/**
+	 * @param Personnage $attaquant
+	 * notification de fin de match
+	 */
 	public function mort($attaquant){
 		echo $attaquant->getNom().' a tué '.$this->nom.'.';
 	}
