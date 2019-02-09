@@ -1,0 +1,25 @@
+<?php
+  $jisuran->attaque($nemesis);
+  $nemesis->attaque($jisuran);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $nemesis->attaque($jisuran);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  $jisuran->attaque($nemesis);
+  var_dump($jisuran,$nemesis);
+?>

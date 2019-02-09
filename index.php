@@ -11,29 +11,11 @@
 </head>
 <body>
   <?php
-    require 'Autoloader.php';
-    Autoloader::register();
-    $fesse = new Arcaniste('Fesse');
-    $cravache = new Arcaniste('Cravache');
-    $fesse->attaque($cravache);
-    $fesse->attaque($cravache);
-    $cravache->attaque($fesse);
-    $fesse->attaque($cravache);
-    $fesse->attaque($cravache);
-    $cravache->attaque($fesse);
-    $fesse->attaque($cravache);
-    $fesse->attaque($cravache);
-    $cravache->attaque($fesse);
-    $fesse->attaque($cravache);
-    $fesse->attaque($cravache);
-    $cravache->attaque($fesse);
-    $fesse->attaque($cravache);
-    // $fesse->attaque($cravache);
-    echo $fesse->mort();
-    // var_dump($fesse,$cravache);
-    FichePersonnage::personnageForm($fesse);
-    FichePersonnage::personnageForm($cravache);
-	
+    if(isset($_GET['combat'])){
+      include_once 'vues/combat.php';
+    }else{
+      include_once 'vues/creation.php';
+    }
   ?>
 </body>
 </html>
