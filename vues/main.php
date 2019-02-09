@@ -29,6 +29,6 @@
 <script src="js/class/Chasseur.js"></script>
 <script src="js/class/Arcaniste.js"></script>
 <script>
-  var perso_1 = new Titan('nemesis');
-  alert(perso_1.nom+' - '+perso_1.vie+' - '+perso_1.armure+' - ');
+  var perso_1 = new Arcaniste('Jisuran');
+  alert(perso_1.nom+' - '+perso_1.vie+' - '+perso_1.armure+' - '+perso_1.attaque+' - '+perso_1.defense);
 </script>
