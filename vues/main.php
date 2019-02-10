@@ -48,7 +48,7 @@
             <div class="container mt-4">
               <div class="row text-center mb-3">
                 <div class="col-8 offset-2">
-                  <button type="button" id="attaque_<?php echo $fiche_perso; ?>" class="form-control btn btn-1 btn-primary" id="bouton_perso_<?php echo $fiche_perso; ?>">Attaquer<br/><img src="assets/ico/target.png" alt=""></button>
+                  <button type="button" id="attaque_<?php echo $fiche_perso; ?>" class="form-control btn btn-tirer btn-<?php echo $fiche_perso; ?> btn-primary" id="bouton_perso_<?php echo $fiche_perso; ?>">Tirer<br/><img src="assets/ico/target.png" alt=""></button>
                 </div>
               </div>
               <div class="row text-center mb-3">

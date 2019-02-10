@@ -55,7 +55,3 @@ $('#bouton_perso_2').on('click', function () {
     $('#fiche_combat_perso_2').removeClass('hide');
   }
 });
-
-
-// $('#fiche_creation_perso_1').addClass('hide');
-// $('#fiche_combat_perso_1').removeClass('hide');
