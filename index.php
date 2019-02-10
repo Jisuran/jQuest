@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
   <script src="js/jquery-3.3.1.min.js"></script>
 </head>
-<body>
+<body class="bg-dark">
   <?php
     include_once 'vues/main.php';
   ?>

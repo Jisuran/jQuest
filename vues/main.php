@@ -24,7 +24,8 @@
         <div id="fiche_combat_perso_<?php echo $fiche_perso; ?>" class="hide">
           <h1 id="nom_combat_perso_<?php echo $fiche_perso; ?>" class="text-center"></h1>
           <h2 id="classe_combat_perso_<?php echo $fiche_perso; ?>" class="text-center"></h2>
-          <div class="form-group form-control">
+          <div class="form-group">
+            <div class="container">
             <div class="row">
               <div class="col-3 text-center">
                 <h3>Armure</h3>
@@ -42,11 +43,25 @@
                   <div id="vie_<?php echo $fiche_perso; ?>" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 100%">0</div>
                 </div>
               </div>
-              <div class="container col-12">
-                <h2 class="ml-3">fesse :</h2>
-                <input type="text"  class="form-control-plaintext text-center" id="nom_perso_<?php echo $fiche_perso; ?>" placeholder="Veuillez entrer un nom de personnage">
               </div>
-
+            </div>
+            <div class="container mt-4">
+              <div class="row text-center mb-3">
+                <div class="col-8 offset-2">
+                  <button type="button" id="attaque_<?php echo $fiche_perso; ?>" class="form-control btn btn-1 btn-primary" id="bouton_perso_<?php echo $fiche_perso; ?>">Attaquer<br/><img src="assets/ico/target.png" alt=""></button>
+                </div>
+              </div>
+              <div class="row text-center mb-3">
+                <div class="col-4">
+                <button type="button" id="grenade_<?php echo $fiche_perso; ?>" class="form-control btn btn-<?php echo $fiche_perso; ?> btn-primary" id="bouton_perso_<?php echo $fiche_perso; ?>">Grenade<br/><img src="assets/ico/explosion.png" alt="" class="w-100 px-2"></button>
+                </div>
+                <div class="col-4">
+                <button type="button" id="special_<?php echo $fiche_perso; ?>" class="form-control btn btn-<?php echo $fiche_perso; ?> btn-primary" id="bouton_perso_<?php echo $fiche_perso; ?>">Spécial<br/><img src alt="" class="w-100 px-2"></button>
+                </div>
+                <div class="col-4">
+                <button type="button" id="ulti_<?php echo $fiche_perso; ?>" class="form-control btn btn-<?php echo $fiche_perso; ?> btn-primary" id="bouton_perso_<?php echo $fiche_perso; ?>">Ulti<br/><img src="assets/ico/chrome.png" alt="" class="w-100 px-2"></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

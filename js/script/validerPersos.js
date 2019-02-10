@@ -1,14 +1,15 @@
 $('#bouton_perso_1').on('click', function () {
   var nom_1     = $('#nom_perso_1').val();
   var classe_1  = $('#classe_perso_1').val();
+  var special_1 = '';
 
   if(nom_1 != '' && classe_1 != 'Veuillez choisir une classe'){
     $('#fiche_creation_perso_1').addClass('hide');
 
     switch (classe_1) {
-      case 'Colossus':  perso_1 = new Colossus(nom_1);  break;
-      case 'Ranger':    perso_1 = new Ranger(nom_1);    break;
-      case 'Storm':     perso_1 = new Storm(nom_1);     break;
+      case 'Colossus':  perso_1 = new Colossus(nom_1);  special_1 = 'armor';  break;
+      case 'Ranger':    perso_1 = new Ranger(nom_1);    special_1 = 'run';    break;
+      case 'Storm':     perso_1 = new Storm(nom_1);     special_1 = 'iris';   break;
     }
 
     var armure_1 = perso_1.getArmure();
@@ -21,6 +22,7 @@ $('#bouton_perso_1').on('click', function () {
     $('#vie_1').attr('aria-valuenow', vie_1);
     $('#vie_1').attr('aria-valuemax', vie_1);
     $('#vie_1').html(vie_1);
+    $('#special_1').find('img').attr('src', 'assets/ico/'+special_1+'.png');
     $('#fiche_combat_perso_1').removeClass('hide');
   }
 });
@@ -28,14 +30,15 @@ $('#bouton_perso_1').on('click', function () {
 $('#bouton_perso_2').on('click', function () {
   var nom_2     = $('#nom_perso_2').val();
   var classe_2  = $('#classe_perso_2').val();
+  var special_2 = '';
 
   if(nom_2 != '' && classe_2 != 'Veuillez choisir une classe'){
     $('#fiche_creation_perso_2').addClass('hide');
 
     switch (classe_2) {
-      case 'Colossus':  perso_2 = new Colossus(nom_2);  break;
-      case 'Ranger':    perso_2 = new Ranger(nom_2);    break;
-      case 'Storm':     perso_2 = new Storm(nom_2);     break;
+      case 'Colossus':  perso_2 = new Colossus(nom_2);  special_2 = 'armor';  break;
+      case 'Ranger':    perso_2 = new Ranger(nom_2);    special_2 = 'run';    break;
+      case 'Storm':     perso_2 = new Storm(nom_2);     special_2 = 'iris';   break;
     }
 
     var armure_2 = perso_2.getArmure();
@@ -48,6 +51,11 @@ $('#bouton_perso_2').on('click', function () {
     $('#vie_2').attr('aria-valuenow', vie_2);
     $('#vie_2').attr('aria-valuemax', vie_2);
     $('#vie_2').html(vie_2);
+    $('#special_2').find('img').attr('src', 'assets/ico/'+special_2+'.png');
     $('#fiche_combat_perso_2').removeClass('hide');
   }
 });
+
+
+// $('#fiche_creation_perso_1').addClass('hide');
+// $('#fiche_combat_perso_1').removeClass('hide');
