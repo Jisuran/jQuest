@@ -4,8 +4,6 @@ $('#bouton_perso_1').on('click', function () {
   var special_1 = '';
 
   if(nom_1 != '' && classe_1 != 'Veuillez choisir une classe'){
-    $('#fiche_creation_perso_1').addClass('hide');
-
     switch (classe_1) {
       case 'Colossus':  perso_1 = new Colossus(nom_1);  special_1 = 'armor';  break;
       case 'Ranger':    perso_1 = new Ranger(nom_1);    special_1 = 'run';    break;
@@ -23,7 +21,10 @@ $('#bouton_perso_1').on('click', function () {
     $('#vie_1').attr('aria-valuemax', vie_1);
     $('#vie_1').html(vie_1);
     $('#special_1').find('img').attr('src', 'assets/ico/'+special_1+'.png');
-    $('#fiche_combat_perso_1').removeClass('hide');
+    $('#commencer').removeClass('hide-1');
+    $(this).prop('disabled', true);
+    $('#nom_perso_1').prop('disabled', true);
+    $('#classe_perso_1').prop('disabled', true);
   }
 });
 
@@ -33,8 +34,6 @@ $('#bouton_perso_2').on('click', function () {
   var special_2 = '';
 
   if(nom_2 != '' && classe_2 != 'Veuillez choisir une classe'){
-    $('#fiche_creation_perso_2').addClass('hide');
-
     switch (classe_2) {
       case 'Colossus':  perso_2 = new Colossus(nom_2);  special_2 = 'armor';  break;
       case 'Ranger':    perso_2 = new Ranger(nom_2);    special_2 = 'run';    break;
@@ -52,6 +51,19 @@ $('#bouton_perso_2').on('click', function () {
     $('#vie_2').attr('aria-valuemax', vie_2);
     $('#vie_2').html(vie_2);
     $('#special_2').find('img').attr('src', 'assets/ico/'+special_2+'.png');
-    $('#fiche_combat_perso_2').removeClass('hide');
+    $('#commencer').removeClass('hide-2');
+    $(this).prop('disabled', true);
+    $('#nom_perso_2').prop('disabled', true);
+    $('#classe_perso_2').prop('disabled', true);
   }
 });
+
+
+$('#btn-commencer').on('click', function () {
+    $('#fiche_creation_perso_1').addClass('hide');
+    $('#fiche_creation_perso_2').addClass('hide');
+    $('#fiche_combat_perso_1').removeClass('hide');
+    $('#fiche_combat_perso_2').removeClass('hide');
+    $('#commencer').addClass('hide');
+    initiative();
+})

@@ -47,8 +47,11 @@ class Personnage {
 	getAttaque()				{ return this.attaque; 		}
 
 	setDefense(defense) { this.defense = defense; }
-	getDefense()						{ return this.defense; 			}
+	getDefense()				{ return this.defense; 		}
 
-	setNom(nom) { this.nom = nom; }
-	getNom()		{ return this.nom; }
+	setNom(nom) { this.nom = nom; 	}
+	getNom()		{ return this.nom; 	}
+
+	setInitiative(initiative) { this.initiative = initiative; }
+	getInitiative()						{ return this.initiative; 			}
 }

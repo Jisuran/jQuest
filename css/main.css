@@ -8,3 +8,7 @@
 .hide-2{
   display: none;
 }
+
+.large-text{
+  font-size: 5em !important;
+}
