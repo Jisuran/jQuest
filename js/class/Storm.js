@@ -3,6 +3,7 @@ class Storm extends Personnage {
     super(nom);
     this.attaque = 3;
     this.defense = 1;
+		this.initiative = 1.2;
   }
 
   tireSur(cible){

@@ -1,10 +1,11 @@
 class Personnage {
   constructor(nom){
-    this.nom    = nom;
-		this.armure = 10;
-    this.vie    = 10;
-		this.attaque = 0;
-		this.defense = 0;
+    this.nom    		= nom;
+		this.armure 		= 10;
+    this.vie    		= 10;
+		this.attaque 		= 0;
+		this.defense 		= 0;
+		this.initiative = 1;
   }
 
   tireSur(cible){
@@ -24,6 +25,8 @@ class Personnage {
 			cible.setVie(0);
 			cible.mort(this);
 		}
+		
+    modifierArmureVie();
   }
 
   /**

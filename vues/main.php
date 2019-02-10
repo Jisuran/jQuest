@@ -8,22 +8,22 @@
           <h1 class="text-center">Fiche personnage °<?php echo $fiche_perso; ?></h1>
           <div class="form-group">
             <h2 class="ml-3">Nom :</h2>
-            <input type="text"  class="form-control" name="personnage[<?php echo $fiche_perso; ?>][nom]" id="nom_perso_<?php echo $fiche_perso; ?>" placeholder="Veuillez entrer un nom de personnage">
+            <input type="text"  class="form-control" id="nom_perso_<?php echo $fiche_perso; ?>" placeholder="Veuillez entrer un nom de personnage">
           </div>
           <div class="form-group">
             <h3 class="ml-3">Classe :</h3>
-            <select class="form-control" name="personnage[<?php echo $fiche_perso; ?>][classe]" id="classe_perso_<?php echo $fiche_perso; ?>">
+            <select class="form-control" id="classe_perso_<?php echo $fiche_perso; ?>">
               <option>Veuillez choisir une classe</option>
               <option value="Colossus">Colossus</option>
               <option value="Ranger">Ranger</option>
               <option value="Storm">Storm</option>
             </select>
           </div>
-          <button type="button" class="form-control btn btn-primary" id="bouton_perso_1">Valider</button>
+          <button type="button" class="form-control btn btn-primary" id="bouton_perso_<?php echo $fiche_perso; ?>">Valider</button>
         </div>
         <div id="fiche_combat_perso_<?php echo $fiche_perso; ?>" class="hide">
-          <h1 id="nom_combat_perso_1" class="text-center"></h1>
-          <h2 id="classe_combat_perso_1" class="text-center"></h2>
+          <h1 id="nom_combat_perso_<?php echo $fiche_perso; ?>" class="text-center"></h1>
+          <h2 id="classe_combat_perso_<?php echo $fiche_perso; ?>" class="text-center"></h2>
           <div class="form-group form-control">
             <div class="row">
               <div class="col-3 text-center">
@@ -31,7 +31,7 @@
               </div>
               <div class="col-9 pt-2">
                 <div class="progress">
-                  <div id="armure_1" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 100%">0</div>
+                  <div id="armure_<?php echo $fiche_perso; ?>" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 100%">0</div>
                 </div>
               </div>
               <div class="col-3 text-center">
@@ -39,7 +39,7 @@
               </div>
               <div class="col-9 pt-2">
                 <div class="progress">
-                  <div id="vie_1" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 100%">0</div>
+                  <div id="vie_<?php echo $fiche_perso; ?>" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 100%">0</div>
                 </div>
               </div>
               <div class="container col-12">
@@ -59,8 +59,5 @@
 <script src="js/class/Colossus.js"></script>
 <script src="js/class/Ranger.js"></script>
 <script src="js/class/Storm.js"></script>
-<script src="js/script/validerPerso1.js"></script>
-<script>
-  var initiative_1 = 0;
-  var initiative_2 = 0;
-</script>
+<script src="js/script/validerPersos.js"></script>
+<script src="js/script/combat.js"></script>
