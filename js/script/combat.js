@@ -3,13 +3,16 @@ $('.btn-tirer').on('click', function () {
     var numero  = 1;
     var joueur  = perso_1;
     var cible   = perso_2;
+    $('#attaque_1').prop('disabled', true);
+    $('#attaque_2').prop('disabled', false);
   }else if($(this).hasClass('btn-2')){
     var numero  = 2;
     var joueur  = perso_2;
     var cible   = perso_1;
+    $('#attaque_2').prop('disabled', true);
+    $('#attaque_1').prop('disabled', false);
   }
   joueur.tireSur(cible);
-
 });
 
 function modifierArmureVie(){
