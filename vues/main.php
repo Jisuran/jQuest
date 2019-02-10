@@ -3,32 +3,64 @@
     <?php
       for ($fiche_perso=1; $fiche_perso <= 2; $fiche_perso++) { ?>
     <div class="col-6">
-      <form class="form-control" id="fiche_perso_<?php echo $fiche_perso; ?>">
-        <h1 class="text-center">Fiche personnage °<?php echo $fiche_perso; ?></h1>
-        <div class="form-group">
-          <h2 class="ml-3">Nom :</h2>
-          <input type="text"  class="form-control" name="personnage[1][nom]" id="nom_perso_1" placeholder="Veuillez entrer un nom de personnage">
+      <form class="form-control" id="form-fiche_perso_<?php echo $fiche_perso; ?>">
+        <div id="fiche_creation_perso_<?php echo $fiche_perso; ?>">
+          <h1 class="text-center">Fiche personnage °<?php echo $fiche_perso; ?></h1>
+          <div class="form-group">
+            <h2 class="ml-3">Nom :</h2>
+            <input type="text"  class="form-control" name="personnage[<?php echo $fiche_perso; ?>][nom]" id="nom_perso_<?php echo $fiche_perso; ?>" placeholder="Veuillez entrer un nom de personnage">
+          </div>
+          <div class="form-group">
+            <h3 class="ml-3">Classe :</h3>
+            <select class="form-control" name="personnage[<?php echo $fiche_perso; ?>][classe]" id="classe_perso_<?php echo $fiche_perso; ?>">
+              <option>Veuillez choisir une classe</option>
+              <option value="Colossus">Colossus</option>
+              <option value="Ranger">Ranger</option>
+              <option value="Storm">Storm</option>
+            </select>
+          </div>
+          <button type="button" class="form-control btn btn-primary" id="bouton_perso_1">Valider</button>
         </div>
-        <div class="form-group">
-          <h3 class="ml-3">Classe :</h3>
-          <select class="form-control" name="personnage[1][classe]" id="classe_perso_1">
-            <option>Veuillez choisir une classe</option>
-            <option value="Titan">Titan</option>
-            <option value="Chasseur">Chasseur</option>
-            <option value="Arcaniste">Arcaniste</option>
-          </select>
+        <div id="fiche_combat_perso_<?php echo $fiche_perso; ?>" class="hide">
+          <h1 id="nom_combat_perso_1" class="text-center"></h1>
+          <h2 id="classe_combat_perso_1" class="text-center"></h2>
+          <div class="form-group form-control">
+            <div class="row">
+              <div class="col-3 text-center">
+                <h3>Armure</h3>
+              </div>
+              <div class="col-9 pt-2">
+                <div class="progress">
+                  <div id="armure_1" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 100%">0</div>
+                </div>
+              </div>
+              <div class="col-3 text-center">
+                <h3>Vie</h3>
+              </div>
+              <div class="col-9 pt-2">
+                <div class="progress">
+                  <div id="vie_1" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 100%">0</div>
+                </div>
+              </div>
+              <div class="container col-12">
+                <h2 class="ml-3">fesse :</h2>
+                <input type="text"  class="form-control-plaintext text-center" id="nom_perso_<?php echo $fiche_perso; ?>" placeholder="Veuillez entrer un nom de personnage">
+              </div>
+
+            </div>
+          </div>
         </div>
-        <button type="button" class="form-control btn btn-primary" id="bouton_perso_1">Valider</button>
       </form>
     </div>
   <?php } ?>
 </div>
 
 <script src="js/class/Personnage.js"></script>
-<script src="js/class/Titan.js"></script>
-<script src="js/class/Chasseur.js"></script>
-<script src="js/class/Arcaniste.js"></script>
+<script src="js/class/Colossus.js"></script>
+<script src="js/class/Ranger.js"></script>
+<script src="js/class/Storm.js"></script>
+<script src="js/script/validerPerso1.js"></script>
 <script>
-  var perso_1 = new Arcaniste('Jisuran');
-  alert(perso_1.nom+' - '+perso_1.vie+' - '+perso_1.armure+' - '+perso_1.attaque+' - '+perso_1.defense);
+  var initiative_1 = 0;
+  var initiative_2 = 0;
 </script>
